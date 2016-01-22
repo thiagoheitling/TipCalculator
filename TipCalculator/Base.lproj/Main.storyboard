@@ -46,8 +46,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfS-i8-5hc">
+                                <rect key="frame" x="60" y="450" width="200" height="37"/>
+                                <accessibility key="accessibilityConfiguration" hint="Tip Amount"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="xhi-73-WRr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWI-0g-Uv5">
-                                <rect key="frame" x="111.5" y="199" width="97" height="30"/>
+                                <rect key="frame" x="111" y="199" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="LBG-Rw-8nL"/>
                                 </constraints>
@@ -63,24 +73,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfS-i8-5hc">
-                                <rect key="frame" x="60" y="450" width="200" height="37"/>
-                                <accessibility key="accessibilityConfiguration" hint="Tip Amount"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4Ac-Cl-3Vk">
+                                <rect key="frame" x="83" y="269" width="154" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="xhi-73-WRr"/>
+                                    <constraint firstAttribute="width" constant="150" id="gGR-Wa-X1I"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <connections>
+                                    <action selector="adjustTipPercentage:" destination="BYZ-38-t0r" eventType="valueChanged" id="zNU-ax-xTH"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZHJ-Ng-1jp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gkc-Cm-DyG"/>
+                            <constraint firstItem="4Ac-Cl-3Vk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gna-z4-oC5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zfS-i8-5hc" secondAttribute="bottom" constant="80.5" id="Lib-Us-0fF"/>
                             <constraint firstItem="MHy-Vd-3H8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mzk-Ds-RF0"/>
                             <constraint firstItem="RsE-Sb-ftj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N8e-kf-nC5"/>
                             <constraint firstItem="MHy-Vd-3H8" firstAttribute="top" secondItem="RsE-Sb-ftj" secondAttribute="bottom" constant="8" id="TBl-mv-QuY"/>
+                            <constraint firstItem="4Ac-Cl-3Vk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TzP-xW-zd8"/>
                             <constraint firstItem="bn2-A1-jet" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y8n-g2-efx"/>
                             <constraint firstItem="zfS-i8-5hc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="avX-F2-x1n"/>
                             <constraint firstItem="ZHJ-Ng-1jp" firstAttribute="top" secondItem="MHy-Vd-3H8" secondAttribute="bottom" constant="33" id="c1J-x7-ajA"/>

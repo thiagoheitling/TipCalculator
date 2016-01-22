@@ -31,7 +31,14 @@
     
     self.tip = userTip * billAmountFloat;
     
-    self.tipAmountLabel.text = [NSString stringWithFormat:@"%0.2f",self.tip];
+    self.tipAmountLabel.text = [NSString stringWithFormat:@"$ %0.2f",self.tip];
+    
+}
+
+- (IBAction)adjustTipPercentage:(UISlider *)sender {
+    
+    self.tip = self.tip + self.tip * sender.value/1000;
+    self.tipAmountLabel.text = [NSString stringWithFormat:@"$ %0.2f",self.tip];
     
 }
 
