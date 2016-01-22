@@ -10,9 +10,25 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
+@property (nonatomic) float tip;
+@property (weak, nonatomic) IBOutlet UILabel *tipAmountLabel;
+
 @end
 
 @implementation ViewController
+
+- (IBAction)calculateTip:(UIButton *)sender {
+    
+    NSString *billAmount = self.billAmountTextField.text;
+    
+    float billAmountFloat = [billAmount floatValue];
+    
+    self.tip = 0.15 * billAmountFloat;
+    
+    self.tipAmountLabel.text = [NSString stringWithFormat:@"%f",self.tip];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,5 +39,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
