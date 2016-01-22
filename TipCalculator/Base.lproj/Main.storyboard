@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHy-Vd-3H8">
-                                <rect key="frame" x="50" y="114" width="220" height="30"/>
+                                <rect key="frame" x="50" y="108" width="220" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="lHm-s0-Z2U"/>
                                 </constraints>
@@ -26,7 +26,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn2-A1-jet">
-                                <rect key="frame" x="101" y="177" width="118" height="36"/>
+                                <rect key="frame" x="101" y="389" width="118" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="AmF-ek-X0e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Calculate Tip"/>
                                 <connections>
@@ -43,29 +46,54 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfS-i8-5hc">
-                                <rect key="frame" x="116" y="254" width="89" height="20.5"/>
-                                <accessibility key="accessibilityConfiguration" hint="Tip Amount"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWI-0g-Uv5">
+                                <rect key="frame" x="111.5" y="199" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="LBG-Rw-8nL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your tip %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHJ-Ng-1jp">
+                                <rect key="frame" x="60" y="171" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="d44-BJ-iRf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfS-i8-5hc">
+                                <rect key="frame" x="60" y="450" width="200" height="37"/>
+                                <accessibility key="accessibilityConfiguration" hint="Tip Amount"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="xhi-73-WRr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bn2-A1-jet" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CpC-LT-MPO"/>
+                            <constraint firstItem="ZHJ-Ng-1jp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gkc-Cm-DyG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zfS-i8-5hc" secondAttribute="bottom" constant="80.5" id="Lib-Us-0fF"/>
                             <constraint firstItem="MHy-Vd-3H8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mzk-Ds-RF0"/>
                             <constraint firstItem="RsE-Sb-ftj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N8e-kf-nC5"/>
-                            <constraint firstItem="MHy-Vd-3H8" firstAttribute="top" secondItem="RsE-Sb-ftj" secondAttribute="bottom" constant="14" id="TBl-mv-QuY"/>
-                            <constraint firstItem="zfS-i8-5hc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wrw-M9-weR"/>
-                            <constraint firstItem="bn2-A1-jet" firstAttribute="top" secondItem="MHy-Vd-3H8" secondAttribute="bottom" constant="33" id="aFp-Hp-Hxc"/>
-                            <constraint firstItem="MHy-Vd-3H8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="94" id="dVj-Yc-03a"/>
-                            <constraint firstItem="zfS-i8-5hc" firstAttribute="top" secondItem="bn2-A1-jet" secondAttribute="bottom" constant="41" id="voq-2E-mzA"/>
+                            <constraint firstItem="MHy-Vd-3H8" firstAttribute="top" secondItem="RsE-Sb-ftj" secondAttribute="bottom" constant="8" id="TBl-mv-QuY"/>
+                            <constraint firstItem="bn2-A1-jet" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y8n-g2-efx"/>
+                            <constraint firstItem="zfS-i8-5hc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="avX-F2-x1n"/>
+                            <constraint firstItem="ZHJ-Ng-1jp" firstAttribute="top" secondItem="MHy-Vd-3H8" secondAttribute="bottom" constant="33" id="c1J-x7-ajA"/>
+                            <constraint firstItem="MHy-Vd-3H8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="88" id="dVj-Yc-03a"/>
+                            <constraint firstItem="bWI-0g-Uv5" firstAttribute="top" secondItem="ZHJ-Ng-1jp" secondAttribute="bottom" constant="7.5" id="eKB-LX-Ahh"/>
+                            <constraint firstItem="bWI-0g-Uv5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tZf-VI-080"/>
+                            <constraint firstItem="zfS-i8-5hc" firstAttribute="top" secondItem="bn2-A1-jet" secondAttribute="bottom" constant="25" id="xm5-Ys-Pbn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="billAmountTextField" destination="MHy-Vd-3H8" id="5oX-p5-Gof"/>
                         <outlet property="tipAmountLabel" destination="zfS-i8-5hc" id="4OO-J5-4Mz"/>
+                        <outlet property="tipPercentageTextField" destination="bWI-0g-Uv5" id="zxy-IW-5s4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

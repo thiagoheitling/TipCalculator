@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *billAmountTextField;
 @property (nonatomic) float tip;
 @property (weak, nonatomic) IBOutlet UILabel *tipAmountLabel;
+@property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
 
 @end
 
@@ -22,11 +23,15 @@
     
     NSString *billAmount = self.billAmountTextField.text;
     
+    NSString *userTipPercentage = self.tipPercentageTextField.text;
+    
+    float userTip = [userTipPercentage floatValue] / 100;
+    
     float billAmountFloat = [billAmount floatValue];
     
-    self.tip = 0.15 * billAmountFloat;
+    self.tip = userTip * billAmountFloat;
     
-    self.tipAmountLabel.text = [NSString stringWithFormat:@"%f",self.tip];
+    self.tipAmountLabel.text = [NSString stringWithFormat:@"%0.2f",self.tip];
     
 }
 
